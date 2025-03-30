@@ -16,7 +16,15 @@ export interface State {
   focusMode: boolean;
 }
 
-export type ActionType = "get_tasks" | "unknown";
+export const actionTypes = [
+  "get_tasks",
+  "add_task",
+  "remove_task",
+  "update_task",
+  "unknown"
+] as const;
+
+export type ActionType = typeof actionTypes[number];
 export type ViewType = "summary" | "detailed";
 
 export interface Result {
