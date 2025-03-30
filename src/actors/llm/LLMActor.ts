@@ -15,7 +15,7 @@ export class LLMActor {
 Your task is to analyze the user’s message and return ONLY one valid ActionType.
 Any other kind of response will be considered invalid.
 If you are unable to identify the action, return "unknown" as the action type.
-    ActionTypes: 
+    ActionTypes: ${actionTypes.join(", ")}
     User's message: "${input}"
     `
   }
