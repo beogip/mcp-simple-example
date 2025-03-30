@@ -11,7 +11,10 @@ export class LLMActor {
   }
 
   private generatePrompt(input: string): string {
-    return `Sos un actor en una MCP, tu tarea es analizar el mensaje del usuario y devolver SOLAMENTE, un action tipe valido. Cualquier otra respuesta se considerara erronea. Si no logras identificar la task devolve como action type "unknown"
+    return `You are an actor in an MCP system.
+Your task is to analyze the user’s message and return ONLY one valid ActionType.
+Any other kind of response will be considered invalid.
+If you are unable to identify the action, return "unknown" as the action type.`
     ActionTypes: 
     El mensaje del usuario es: "${input}"
     `
