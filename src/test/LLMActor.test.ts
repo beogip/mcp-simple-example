@@ -2,6 +2,7 @@ import { LLMActor } from "../actors/llm/LLMActor";
 import { mockLLM } from "../actors/llm/mockLLM";
 
 async function main(){
+  let passed = 0;
   const testCases = [
     { input: "list tasks", expected: "get_tasks" },
     { input: "add task", expected: "add_task" },
@@ -15,7 +16,7 @@ async function main(){
   }
   console.log(`\nPasaron ${passed}/${testCases.length} tests`);
 }
-let passed = 0;
+
 async function testLLMActor(input: string, expected: string) {
   const actor = new LLMActor(mockLLM);
   const result = await actor.decide({userId: "user123", message: input});
