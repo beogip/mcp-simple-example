@@ -14,7 +14,7 @@ export class LLMActor {
     return `You are an actor in an MCP system.
 Your task is to analyze the user’s message and return ONLY one valid ActionType.
 Any other kind of response will be considered invalid.
-If you are unable to identify the action, return "unknown" as the action type.`
+If you are unable to identify the action, return "unknown" as the action type.
     ActionTypes: 
     El mensaje del usuario es: "${input}"
     `
