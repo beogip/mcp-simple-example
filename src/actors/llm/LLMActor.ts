@@ -16,7 +16,7 @@ Your task is to analyze the user’s message and return ONLY one valid ActionTyp
 Any other kind of response will be considered invalid.
 If you are unable to identify the action, return "unknown" as the action type.
     ActionTypes: 
-    El mensaje del usuario es: "${input}"
+    User's message: "${input}"
     `
   }
 
