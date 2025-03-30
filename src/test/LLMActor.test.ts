@@ -1,8 +1,8 @@
 import { LLMActor } from "../actors/llm/LLMActor";
 import { mockLLM } from "../actors/llm/mockLLM";
+let passed = 0;
 
 async function main(){
-  let passed = 0;
   const testCases = [
     { input: "list tasks", expected: "get_tasks" },
     { input: "add task", expected: "add_task" },
